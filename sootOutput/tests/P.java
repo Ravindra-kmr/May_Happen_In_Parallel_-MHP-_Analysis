@@ -23,25 +23,29 @@ class B extends Thread {
 	Buf b;
 	public void run() {
 	try {
+		this.bar();
 		synchronized (b){
-			this.bar();
+			this.car();
+			b.wait();
+			this.foo();
 		}
-		this.foo();
 	
 	} catch (Exception e){}
 	}
 	public void foo(){ } 
 	public void bar(){ } 
+	public void car(){ }
 }
 
 class C extends Thread {
 	Buf b;
 	public void run() {
 	try {
+		this.f2();
 		synchronized (b) {
-			this.f2();
+			b.notifyAll();
+			this.f3();
 		}
-		this.f3();
 
 	} catch (Exception e){}
 	}

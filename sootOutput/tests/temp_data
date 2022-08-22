@@ -1,0 +1,708 @@
+Soot started on Thu Apr 21 01:01:29 IST 2022
+Thread classes: [B, C]
+
+***********************************
+Unit:r6 := @parameter0: java.lang.String[]
+Worklist:[$r0 = new B]
+Threadlist:[]
+***********************************
+***********************************
+Unit:$r0 = new B
+Worklist:[specialinvoke $r0.<B: void <init>()>()]
+Threadlist:[]
+***********************************
+***********************************
+Unit:specialinvoke $r0.<B: void <init>()>()
+Worklist:[$r1 = new C]
+Threadlist:[]
+Special invoke statement.
+***********************************
+***********************************
+Unit:$r1 = new C
+Worklist:[specialinvoke $r1.<C: void <init>()>()]
+Threadlist:[]
+***********************************
+***********************************
+Unit:specialinvoke $r1.<C: void <init>()>()
+Worklist:[$r2 = new Buf]
+Threadlist:[]
+Special invoke statement.
+***********************************
+***********************************
+Unit:$r2 = new Buf
+Worklist:[specialinvoke $r2.<Buf: void <init>()>()]
+Threadlist:[]
+***********************************
+***********************************
+Unit:specialinvoke $r2.<Buf: void <init>()>()
+Worklist:[if 1 == 0 goto $r3 = new E]
+Threadlist:[]
+Special invoke statement.
+***********************************
+***********************************
+Unit:if 1 == 0 goto $r3 = new E
+Worklist:[$r4 = new D, $r3 = new E]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r3 = new E
+Worklist:[$r4 = new D, specialinvoke $r3.<E: void <init>()>()]
+Threadlist:[]
+***********************************
+***********************************
+Unit:specialinvoke $r3.<E: void <init>()>()
+Worklist:[$r4 = new D, r7 = $r3]
+Threadlist:[]
+Special invoke statement.
+***********************************
+***********************************
+Unit:r7 = $r3
+Worklist:[$r4 = new D, $r0.<B: Buf b> = $r2]
+Threadlist:[]
+***********************************
+***********************************
+Unit:$r0.<B: Buf b> = $r2
+Worklist:[$r4 = new D, $r1.<C: Buf b> = $r2]
+Threadlist:[]
+***********************************
+***********************************
+Unit:$r1.<C: Buf b> = $r2
+Worklist:[$r4 = new D, virtualinvoke r7.<D: void foo()>()]
+Threadlist:[]
+***********************************
+***********************************
+Unit:virtualinvoke r7.<D: void foo()>()
+Worklist:[$r4 = new D, virtualinvoke $r0.<B: void start()>()]
+Threadlist:[]
+Virtual invoke statement
+r7: types are [D, E]
+D
+E
+Updated Worklist:[$r4 = new D, virtualinvoke $r0.<B: void start()>(), r0 := @this: D]
+***********************************
+***********************************
+Unit:r0 := @this: D
+Worklist:[$r4 = new D, virtualinvoke $r0.<B: void start()>(), return]
+Threadlist:[]
+***********************************
+***********************************
+Unit:return
+Worklist:[$r4 = new D, virtualinvoke $r0.<B: void start()>()]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke $r0.<B: void start()>()
+Worklist:[$r4 = new D, virtualinvoke $r1.<C: void start()>()]
+Threadlist:[]
+Virtual invoke statement
+$r0: types are [B]
+B
+***********************************
+***********************************
+Unit:virtualinvoke $r1.<C: void start()>()
+Worklist:[$r4 = new D, virtualinvoke $r0.<B: void join()>()]
+Threadlist:[B]
+Virtual invoke statement
+$r1: types are [C]
+C
+***********************************
+***********************************
+Unit:virtualinvoke $r0.<B: void join()>()
+Worklist:[$r4 = new D, virtualinvoke $r1.<C: void join()>()]
+Threadlist:[B, C]
+Virtual invoke statement
+$r0: types are [B]
+B
+***********************************
+***********************************
+Unit:virtualinvoke $r1.<C: void join()>()
+Worklist:[$r4 = new D, goto [?= return]]
+Threadlist:[B, C]
+Virtual invoke statement
+$r1: types are [C]
+C
+***********************************
+***********************************
+Unit:goto [?= return]
+Worklist:[$r4 = new D, return]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:return
+Worklist:[$r4 = new D]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r4 = new D
+Worklist:[specialinvoke $r4.<D: void <init>()>()]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:specialinvoke $r4.<D: void <init>()>()
+Worklist:[r7 = $r4]
+Threadlist:[B, C]
+Special invoke statement.
+***********************************
+***********************************
+Unit:r7 = $r4
+Worklist:[goto [?= $r0.<B: Buf b> = $r2]]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:goto [?= $r0.<B: Buf b> = $r2]
+Worklist:[$r0.<B: Buf b> = $r2]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r0.<B: Buf b> = $r2
+Worklist:[$r1.<C: Buf b> = $r2]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:$r1.<C: Buf b> = $r2
+Worklist:[virtualinvoke r7.<D: void foo()>()]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:virtualinvoke r7.<D: void foo()>()
+Worklist:[virtualinvoke $r0.<B: void start()>()]
+Threadlist:[B, C]
+Virtual invoke statement
+r7: types are [D, E]
+D
+E
+Updated Worklist:[virtualinvoke $r0.<B: void start()>(), r0 := @this: D]
+***********************************
+***********************************
+Unit:r0 := @this: D
+Worklist:[virtualinvoke $r0.<B: void start()>(), return]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:return
+Worklist:[virtualinvoke $r0.<B: void start()>()]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke $r0.<B: void start()>()
+Worklist:[virtualinvoke $r1.<C: void start()>()]
+Threadlist:[B, C]
+Virtual invoke statement
+$r0: types are [B]
+B
+***********************************
+***********************************
+Unit:virtualinvoke $r1.<C: void start()>()
+Worklist:[virtualinvoke $r0.<B: void join()>()]
+Threadlist:[B, C, B]
+Virtual invoke statement
+$r1: types are [C]
+C
+***********************************
+***********************************
+Unit:virtualinvoke $r0.<B: void join()>()
+Worklist:[virtualinvoke $r1.<C: void join()>()]
+Threadlist:[B, C, B, C]
+Virtual invoke statement
+$r0: types are [B]
+B
+***********************************
+***********************************
+Unit:virtualinvoke $r1.<C: void join()>()
+Worklist:[goto [?= return]]
+Threadlist:[B, C, B, C]
+Virtual invoke statement
+$r1: types are [C]
+C
+***********************************
+***********************************
+Unit:goto [?= return]
+Worklist:[return]
+Threadlist:[B, C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:return
+Worklist:[]
+Threadlist:[B, C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:r0 := @this: B
+Worklist:[$r1 = r0.<B: Buf b>]
+Threadlist:[C, B, C]
+***********************************
+***********************************
+Unit:$r1 = r0.<B: Buf b>
+Worklist:[entermonitor $r1]
+Threadlist:[C, B, C]
+***********************************
+***********************************
+Unit:entermonitor $r1
+Worklist:[virtualinvoke r0.<B: void bar()>()]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<B: void bar()>()
+Worklist:[$r2 = r0.<B: Buf b>]
+Threadlist:[C, B, C]
+Virtual invoke statement
+r0: types are [B]
+B
+Updated Worklist:[$r2 = r0.<B: Buf b>, r0 := @this: B]
+***********************************
+***********************************
+Unit:r0 := @this: B
+Worklist:[$r2 = r0.<B: Buf b>, return]
+Threadlist:[C, B, C]
+***********************************
+***********************************
+Unit:return
+Worklist:[$r2 = r0.<B: Buf b>]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r2 = r0.<B: Buf b>
+Worklist:[entermonitor $r2]
+Threadlist:[C, B, C]
+***********************************
+***********************************
+Unit:entermonitor $r2
+Worklist:[exitmonitor $r2]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:exitmonitor $r2
+Worklist:[goto [?= $r3 = r0.<B: Buf b>]]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= $r3 = r0.<B: Buf b>]
+Worklist:[$r3 = r0.<B: Buf b>]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r3 = r0.<B: Buf b>
+Worklist:[virtualinvoke $r3.<java.lang.Object: void wait()>()]
+Threadlist:[C, B, C]
+***********************************
+***********************************
+Unit:virtualinvoke $r3.<java.lang.Object: void wait()>()
+Worklist:[exitmonitor $r1]
+Threadlist:[C, B, C]
+Virtual invoke statement
+$r3: types are [Buf]
+Buf
+***********************************
+***********************************
+Unit:exitmonitor $r1
+Worklist:[goto [?= virtualinvoke r0.<B: void foo()>()]]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= virtualinvoke r0.<B: void foo()>()]
+Worklist:[virtualinvoke r0.<B: void foo()>()]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<B: void foo()>()
+Worklist:[goto [?= return]]
+Threadlist:[C, B, C]
+Virtual invoke statement
+r0: types are [B]
+B
+Updated Worklist:[goto [?= return], r0 := @this: B]
+***********************************
+***********************************
+Unit:r0 := @this: B
+Worklist:[goto [?= return], return]
+Threadlist:[C, B, C]
+***********************************
+***********************************
+Unit:return
+Worklist:[goto [?= return]]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= return]
+Worklist:[return]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:return
+Worklist:[]
+Threadlist:[C, B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:r0 := @this: C
+Worklist:[$r1 = r0.<C: Buf b>]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:$r1 = r0.<C: Buf b>
+Worklist:[entermonitor $r1]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:entermonitor $r1
+Worklist:[virtualinvoke r0.<C: void f2()>()]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<C: void f2()>()
+Worklist:[$r2 = r0.<C: Buf b>]
+Threadlist:[B, C]
+Virtual invoke statement
+r0: types are [C]
+C
+Updated Worklist:[$r2 = r0.<C: Buf b>, r0 := @this: C]
+***********************************
+***********************************
+Unit:r0 := @this: C
+Worklist:[$r2 = r0.<C: Buf b>, return]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:return
+Worklist:[$r2 = r0.<C: Buf b>]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r2 = r0.<C: Buf b>
+Worklist:[entermonitor $r2]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:entermonitor $r2
+Worklist:[exitmonitor $r2]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:exitmonitor $r2
+Worklist:[goto [?= $r3 = r0.<C: Buf b>]]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= $r3 = r0.<C: Buf b>]
+Worklist:[$r3 = r0.<C: Buf b>]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r3 = r0.<C: Buf b>
+Worklist:[virtualinvoke $r3.<java.lang.Object: void notifyAll()>()]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:virtualinvoke $r3.<java.lang.Object: void notifyAll()>()
+Worklist:[exitmonitor $r1]
+Threadlist:[B, C]
+Virtual invoke statement
+$r3: types are [Buf]
+Buf
+***********************************
+***********************************
+Unit:exitmonitor $r1
+Worklist:[goto [?= virtualinvoke r0.<C: void f3()>()]]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= virtualinvoke r0.<C: void f3()>()]
+Worklist:[virtualinvoke r0.<C: void f3()>()]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<C: void f3()>()
+Worklist:[goto [?= return]]
+Threadlist:[B, C]
+Virtual invoke statement
+r0: types are [C]
+C
+Updated Worklist:[goto [?= return], r0 := @this: C]
+***********************************
+***********************************
+Unit:r0 := @this: C
+Worklist:[goto [?= return], return]
+Threadlist:[B, C]
+***********************************
+***********************************
+Unit:return
+Worklist:[goto [?= return]]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= return]
+Worklist:[return]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:return
+Worklist:[]
+Threadlist:[B, C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:r0 := @this: B
+Worklist:[$r1 = r0.<B: Buf b>]
+Threadlist:[C]
+***********************************
+***********************************
+Unit:$r1 = r0.<B: Buf b>
+Worklist:[entermonitor $r1]
+Threadlist:[C]
+***********************************
+***********************************
+Unit:entermonitor $r1
+Worklist:[virtualinvoke r0.<B: void bar()>()]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<B: void bar()>()
+Worklist:[$r2 = r0.<B: Buf b>]
+Threadlist:[C]
+Virtual invoke statement
+r0: types are [B]
+B
+Updated Worklist:[$r2 = r0.<B: Buf b>, r0 := @this: B]
+***********************************
+***********************************
+Unit:r0 := @this: B
+Worklist:[$r2 = r0.<B: Buf b>, return]
+Threadlist:[C]
+***********************************
+***********************************
+Unit:return
+Worklist:[$r2 = r0.<B: Buf b>]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r2 = r0.<B: Buf b>
+Worklist:[entermonitor $r2]
+Threadlist:[C]
+***********************************
+***********************************
+Unit:entermonitor $r2
+Worklist:[exitmonitor $r2]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:exitmonitor $r2
+Worklist:[goto [?= $r3 = r0.<B: Buf b>]]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= $r3 = r0.<B: Buf b>]
+Worklist:[$r3 = r0.<B: Buf b>]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r3 = r0.<B: Buf b>
+Worklist:[virtualinvoke $r3.<java.lang.Object: void wait()>()]
+Threadlist:[C]
+***********************************
+***********************************
+Unit:virtualinvoke $r3.<java.lang.Object: void wait()>()
+Worklist:[exitmonitor $r1]
+Threadlist:[C]
+Virtual invoke statement
+$r3: types are [Buf]
+Buf
+***********************************
+***********************************
+Unit:exitmonitor $r1
+Worklist:[goto [?= virtualinvoke r0.<B: void foo()>()]]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= virtualinvoke r0.<B: void foo()>()]
+Worklist:[virtualinvoke r0.<B: void foo()>()]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<B: void foo()>()
+Worklist:[goto [?= return]]
+Threadlist:[C]
+Virtual invoke statement
+r0: types are [B]
+B
+Updated Worklist:[goto [?= return], r0 := @this: B]
+***********************************
+***********************************
+Unit:r0 := @this: B
+Worklist:[goto [?= return], return]
+Threadlist:[C]
+***********************************
+***********************************
+Unit:return
+Worklist:[goto [?= return]]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= return]
+Worklist:[return]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:return
+Worklist:[]
+Threadlist:[C]
+I do not care about this statement
+***********************************
+***********************************
+Unit:r0 := @this: C
+Worklist:[$r1 = r0.<C: Buf b>]
+Threadlist:[]
+***********************************
+***********************************
+Unit:$r1 = r0.<C: Buf b>
+Worklist:[entermonitor $r1]
+Threadlist:[]
+***********************************
+***********************************
+Unit:entermonitor $r1
+Worklist:[virtualinvoke r0.<C: void f2()>()]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<C: void f2()>()
+Worklist:[$r2 = r0.<C: Buf b>]
+Threadlist:[]
+Virtual invoke statement
+r0: types are [C]
+C
+Updated Worklist:[$r2 = r0.<C: Buf b>, r0 := @this: C]
+***********************************
+***********************************
+Unit:r0 := @this: C
+Worklist:[$r2 = r0.<C: Buf b>, return]
+Threadlist:[]
+***********************************
+***********************************
+Unit:return
+Worklist:[$r2 = r0.<C: Buf b>]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r2 = r0.<C: Buf b>
+Worklist:[entermonitor $r2]
+Threadlist:[]
+***********************************
+***********************************
+Unit:entermonitor $r2
+Worklist:[exitmonitor $r2]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:exitmonitor $r2
+Worklist:[goto [?= $r3 = r0.<C: Buf b>]]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= $r3 = r0.<C: Buf b>]
+Worklist:[$r3 = r0.<C: Buf b>]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:$r3 = r0.<C: Buf b>
+Worklist:[virtualinvoke $r3.<java.lang.Object: void notifyAll()>()]
+Threadlist:[]
+***********************************
+***********************************
+Unit:virtualinvoke $r3.<java.lang.Object: void notifyAll()>()
+Worklist:[exitmonitor $r1]
+Threadlist:[]
+Virtual invoke statement
+$r3: types are [Buf]
+Buf
+***********************************
+***********************************
+Unit:exitmonitor $r1
+Worklist:[goto [?= virtualinvoke r0.<C: void f3()>()]]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= virtualinvoke r0.<C: void f3()>()]
+Worklist:[virtualinvoke r0.<C: void f3()>()]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:virtualinvoke r0.<C: void f3()>()
+Worklist:[goto [?= return]]
+Threadlist:[]
+Virtual invoke statement
+r0: types are [C]
+C
+Updated Worklist:[goto [?= return], r0 := @this: C]
+***********************************
+***********************************
+Unit:r0 := @this: C
+Worklist:[goto [?= return], return]
+Threadlist:[]
+***********************************
+***********************************
+Unit:return
+Worklist:[goto [?= return]]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:goto [?= return]
+Worklist:[return]
+Threadlist:[]
+I do not care about this statement
+***********************************
+***********************************
+Unit:return
+Worklist:[]
+Threadlist:[]
+I do not care about this statement
+***********************************
+unitmap: {0=r6 := @parameter0: java.lang.String[], 1=$r0 = new B, 2=specialinvoke $r0.<B: void <init>()>(), 3=$r1 = new C, 4=specialinvoke $r1.<C: void <init>()>(), 5=$r2 = new Buf, 6=specialinvoke $r2.<Buf: void <init>()>(), 7=if 1 == 0 goto $r3 = new E, 8=$r3 = new E, 9=specialinvoke $r3.<E: void <init>()>(), 10=r7 = $r3, 11=$r0.<B: Buf b> = $r2, 12=$r1.<C: Buf b> = $r2, 13=virtualinvoke r7.<D: void foo()>(), 14=r0 := @this: D, 15=return, 16=virtualinvoke $r0.<B: void start()>(), 17=virtualinvoke $r1.<C: void start()>(), 18=virtualinvoke $r0.<B: void join()>(), 19=virtualinvoke $r1.<C: void join()>(), 20=goto [?= return], 21=return, 22=$r4 = new D, 23=specialinvoke $r4.<D: void <init>()>(), 24=r7 = $r4, 25=goto [?= $r0.<B: Buf b> = $r2], 26=$r0.<B: Buf b> = $r2, 27=$r1.<C: Buf b> = $r2, 28=virtualinvoke r7.<D: void foo()>(), 29=r0 := @this: D, 30=return, 31=virtualinvoke $r0.<B: void start()>(), 32=virtualinvoke $r1.<C: void start()>(), 33=virtualinvoke $r0.<B: void join()>(), 34=virtualinvoke $r1.<C: void join()>(), 35=goto [?= return], 36=return, 37=r0 := @this: B, 38=$r1 = r0.<B: Buf b>, 39=entermonitor $r1, 40=virtualinvoke r0.<B: void bar()>(), 41=r0 := @this: B, 42=return, 43=$r2 = r0.<B: Buf b>, 44=entermonitor $r2, 45=exitmonitor $r2, 46=goto [?= $r3 = r0.<B: Buf b>], 47=$r3 = r0.<B: Buf b>, 48=virtualinvoke $r3.<java.lang.Object: void wait()>(), 49=exitmonitor $r1, 50=goto [?= virtualinvoke r0.<B: void foo()>()], 51=virtualinvoke r0.<B: void foo()>(), 52=r0 := @this: B, 53=return, 54=goto [?= return], 55=return, 56=r0 := @this: C, 57=$r1 = r0.<C: Buf b>, 58=entermonitor $r1, 59=virtualinvoke r0.<C: void f2()>(), 60=r0 := @this: C, 61=return, 62=$r2 = r0.<C: Buf b>, 63=entermonitor $r2, 64=exitmonitor $r2, 65=goto [?= $r3 = r0.<C: Buf b>], 66=$r3 = r0.<C: Buf b>, 67=virtualinvoke $r3.<java.lang.Object: void notifyAll()>(), 68=exitmonitor $r1, 69=goto [?= virtualinvoke r0.<C: void f3()>()], 70=virtualinvoke r0.<C: void f3()>(), 71=r0 := @this: C, 72=return, 73=goto [?= return], 74=return, 75=r0 := @this: B, 76=$r1 = r0.<B: Buf b>, 77=entermonitor $r1, 78=virtualinvoke r0.<B: void bar()>(), 79=r0 := @this: B, 80=return, 81=$r2 = r0.<B: Buf b>, 82=entermonitor $r2, 83=exitmonitor $r2, 84=goto [?= $r3 = r0.<B: Buf b>], 85=$r3 = r0.<B: Buf b>, 86=virtualinvoke $r3.<java.lang.Object: void wait()>(), 87=exitmonitor $r1, 88=goto [?= virtualinvoke r0.<B: void foo()>()], 89=virtualinvoke r0.<B: void foo()>(), 90=r0 := @this: B, 91=return, 92=goto [?= return], 93=return, 94=r0 := @this: C, 95=$r1 = r0.<C: Buf b>, 96=entermonitor $r1, 97=virtualinvoke r0.<C: void f2()>(), 98=r0 := @this: C, 99=return, 100=$r2 = r0.<C: Buf b>, 101=entermonitor $r2, 102=exitmonitor $r2, 103=goto [?= $r3 = r0.<C: Buf b>], 104=$r3 = r0.<C: Buf b>, 105=virtualinvoke $r3.<java.lang.Object: void notifyAll()>(), 106=exitmonitor $r1, 107=goto [?= virtualinvoke r0.<C: void f3()>()], 108=virtualinvoke r0.<C: void f3()>(), 109=r0 := @this: C, 110=return, 111=goto [?= return], 112=return}
+monitormap:{96=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 82=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 101=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 39=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 58=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 44=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 77=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 63=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,}
+monitorunitmap:{96=[97, 98, 99, 100, 101, 102, 103, 104, 105, 106], 82=[83], 101=[102], 39=[48, 49, 40, 41, 42, 43, 44, 45, 46, 47], 58=[64, 65, 66, 67, 68, 59, 60, 61, 62, 63], 44=[45], 77=[80, 81, 82, 83, 84, 85, 86, 87, 78, 79], 63=[64]}
+Notifymap:{}
+NotifyAllmap:{67=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 105=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,}
+waitmap:{48=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,, 86=AllocNode 3 new Buf in method <P: void main(java.lang.String[])>,}
+Soot finished on Thu Apr 21 01:01:46 IST 2022
+Soot has run for 0 min. 16 sec.
+I am the reference MHP-A
